@@ -1,0 +1,208 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+}
+
+.content {
+    position: relative;
+    /* relative */
+    max-width: 1200px;
+    /* container (optional, adjust based on your design) */
+    margin-left: auto;
+    /* mx-auto */
+    margin-right: auto;
+    /* mx-auto */
+    padding-left: 1rem;
+    /* px-4 (1rem = 16px for Tailwind’s default) */
+    padding-right: 1rem;
+    /* px-4 */
+    padding-top: 2rem;
+    /* py-8 (2rem = 32px for Tailwind’s default) */
+    padding-bottom: 2rem;
+    /* py-8 */
+}
+
+.banner {
+    background: linear-gradient(to right, #92d4f5, #c188de);
+    text-align: center;
+    padding: 40px 20px;
+    color: #333;
+    border-radius: 0 0 20px 20px;
+}
+
+.banner .icons {
+    font-size: 32px;
+    color: #6b46c1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+    /* animate-pulse */
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/* .banner .icons i {
+    width: 25px;
+    height: 25px;
+} */
+
+.banner h1 {
+    font-size: 36px;
+    color: #4a4a4a;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* From Uiverse.io by Pradeepsaranbishnoi */
+:focus {
+    outline: 0;
+    border-color: #6b46c1;
+    box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.mydict input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.mydict input[type="radio"]:checked+span {
+    box-shadow: 0 0 0 0.0625em #6b46c1;
+    background-color: #dee7ff;
+    z-index: 1;
+    color: black;
+}
+
+label span {
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    position: relative;
+    margin-left: .0625em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: .05em;
+    color: #3e4963;
+    text-align: center;
+    transition: background-color .5s ease;
+}
+
+label:first-child span {
+    border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+    border-radius: 0 .375em .375em 0;
+}
+
+/* .uploads {
+    
+    
+    background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+   
+    padding: 20px;
+    border: 2px dashed #87a2e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+#file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.upload-box {
+    width: 80%;
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    /* relative */
+    border: 2px dashed #60a5fa;
+    /* border-2 border-dashed border-blue-400 */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    background: linear-gradient(to bottom, #ffffff, #f0f9ff);
+    /* bg-gradient-to-b from-white to-blue-50 */
+    padding: 2rem;
+    /* p-8 */
+    transition: all 0.3s ease-in-out;
+    /* transition-all duration-300 ease-in-out */
+}
+
+.upload-box:hover {
+    transform: scale(1.02);
+    /* hover:scale-[1.02] */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* hover:shadow-xl */
+}
+
+.upload-box.dragover {
+    border-color: #4CAF50;
+}
+
+.uploads i {
+    font-size: 40px;
+    color: #6b46c1;
+    margin-bottom: 10px;
+}
+
+.uploads h3 {
+    font-size: 18px;
+    color: #4a4a4a;
+    margin: 10px 0;
+}
+
+.uploads p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.uploads p i {
+    margin-right: 5px;
+    font-size: 16px;
+    color: #4a90e2;
+}
